@@ -2,6 +2,12 @@
 Тестуемо усі сторінки сайту:https://www.symphony-solutions.com/ на статус код 200
 We test all pages of the site: https://www.symphony-solutions.com/ for status code 200
 """
+"""
+Для запуску усіх тестів в терміналі:pytest -v -s C:\Test_status_code_symphony_com\tests
+Для запуску тестів в файл з збереженням файлу Allure: 
+pytest -v -s C:\Test_status_code_symphony_com\tests --alluredir=allure_ss_com
+Збгенерувати посилання на звіт по тестах allure serve allure_ss_com
+"""
 import pytest
 import requests
 from configuration import SERVICE_URL, ALL_URL_LIST, WRONG_URL_HTTPS, WRONG_URL_AFTER_SLASH, XML_URL
@@ -32,13 +38,4 @@ def test_entering_incorrect_data_in_the_url_after_the_slash(url):
     """
     response = requests.get(SERVICE_URL+url)
     assert response.status_code == 404, GlobalErrorMassages.WRONG_STATUS_CODE.value
-
-
-
-
-
-'''
-1. Как с xml вытянуть url и записать их в лист, (может import json, но не вышло)
-2. Ввод данных через post, как отправить данные в форму через post без селениума
-'''
 
