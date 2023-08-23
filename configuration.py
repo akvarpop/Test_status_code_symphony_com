@@ -1,4 +1,7 @@
 SERVICE_URL = 'https://symphony-solutions.com/'
+
+SERVICE_URL_DEMO = 'https://demo2.symphonysolutions.info/'
+
 CONTACT_FORM_URL = 'https://symphony-solutions.com/contact-us'
 
 WRONG_URL_AFTER_SLASH = ['test', 'test/', 'contact-us/test', ]
@@ -6,6 +9,10 @@ WRONG_URL_AFTER_SLASH = ['test', 'test/', 'contact-us/test', ]
 WRONG_URL_HTTPS = ['http://symphony-solutions.com',
                    'http://symphony-solutions.com',
                    'http://www.symphony-solutions.com', ]
+
+WRONG_URL_HTTPS_DEMO = ['http://demo2.symphonysolutions.info',
+                   'http://demo2.symphonysolutions.info',
+                   'http://www.demo2.symphonysolutions.info', ]
 
 XML_URL = 'https://symphony-solutions.com/sitemap.xml'
 
